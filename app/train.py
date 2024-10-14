@@ -9,7 +9,7 @@ from sklearn.preprocessing import MinMaxScaler
 from torch.utils.data import DataLoader, Dataset
 
 # 下载AAPL一年的股票数据
-df = yf.download('AAPL', start='2023-01-01', end='2024-01-01', interval='1d')
+df = yf.download('U', start='2023-10-13', end='2024-10-14', interval='1d')
 
 # 计算百分比变化
 df_pct_change = df[['Open', 'High', 'Low', 'Close']].pct_change().dropna()
